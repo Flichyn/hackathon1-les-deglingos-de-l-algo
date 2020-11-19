@@ -12,29 +12,32 @@
 
     <div class="yourShot container">
         <div class="recipe-container">
-        <div>
-            <img src="{{ cocktails.image }}" alt="Your shot" class="shot-image box-shadow">
+            <div>
+                <img src="{{ cocktails.image }}" alt="Your shot" class="shot-image box-shadow">
+            </div>
+            <div class="shot-ingredients">
+                <ul>
+                    {% if cocktails.ingredient1 is not empty %}
+                        <li>{{ cocktails.ingredient1 }}</li>
+                    {% endif %}
+                    {% if cocktails.ingredient2 is not empty %}
+                        <li>{{ cocktails.ingredient2 }}</li>
+                    {% endif %}
+                    {% if cocktails.ingredient3 is not empty %}
+                        <li>{{ cocktails.ingredient3 }}</li>
+                    {% endif %}
+                    {% if cocktails.ingredient4 is not empty %}
+                        <li>{{ cocktails.ingredient4 }}</li>
+                    {% endif %}
+                    {% if cocktails.ingredient5 is not empty %}
+                        <li>{{ cocktails.ingredient5 }}</li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
-        <div class="shot-ingredients">
-            <ul>
-                {% if cocktails.ingredient1 is not empty %}
-                    <li>{{ cocktails.ingredient1 }}</li>
-                {% endif %}
-                {% if cocktails.ingredient2 is not empty %}
-                    <li>{{ cocktails.ingredient2 }}</li>
-                {% endif %}
-                {% if cocktails.ingredient3 is not empty %}
-                    <li>{{ cocktails.ingredient3 }}</li>
-                {% endif %}
-                {% if cocktails.ingredient4 is not empty %}
-                    <li>{{ cocktails.ingredient4 }}</li>
-                {% endif %}
-                {% if cocktails.ingredient5 is not empty %}
-                    <li>{{ cocktails.ingredient5 }}</li>
-                {% endif %}
-            </ul>
-        </div>
-        </div>
+    </div>
+    <div class="container text-center inspirational-bullshit-container">
+        <p class="inspirational-bullshit">{{ quote.quoteText }}</p>
     </div>
 
     <script>setTimeout(function () {

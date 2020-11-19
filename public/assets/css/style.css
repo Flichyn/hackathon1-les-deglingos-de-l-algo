@@ -52,6 +52,7 @@ h2 {
 
 p {
     font-size: var(--font-size-text);
+    color: var(--light);
 }
 
 span {
