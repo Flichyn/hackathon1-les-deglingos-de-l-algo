@@ -1,5 +1,32 @@
 {% extends 'layout.html.twig' %}
-
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/home.css">{% endblock %}
 {% block content %}
-    <h1>Hello Wilder !</h1>
+    <h1>SNAP<span>SHOT</span></h1>
+    <h2>Thirsty ? We’ve got your back !</h2>
+    <div class="container">
+        <div class="d-flex col-lg-12 justify-content-center">
+            <p class="middleText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta faucibus nulla, id ultricies purus
+                pretium non.
+                Donec vel tristique ipsum. Vestibulum facilisis ante sit amet nibh posuere, sed semper diam porta.
+                Maecenas in pulvinar sapien, sit amet convallis lorem. Proin ut ex non dui lacinia semper nec et dolor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta faucibus nulla, id ultricies purus
+                pretium non.
+                Donec vel tristique ipsum. Vestibulum facilisis ante sit amet nibh posuere, sed semper diam porta.
+                Maecenas in pulvinar sapien, sit amet convallis lorem. Proin ut ex non dui lacinia semper nec et dolor.
+            </p>
+        </div>
+        <div class="d-flex col-lg-12 justify-content-center">
+            <a class="boutonBeer" href="#">BEER ME ! *</a>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <div class="advertisement">
+        <p>
+            * Smuggled alcohol may cause blindness, brain damage and sometimes death, we disclaim any responsibility for
+            this shit
+        </p>
+    </div>
 {% endblock %}
