@@ -2,12 +2,38 @@ body {
     background: var(--background);
 }
 
+span {
+    color: var(--second-color);
+    font-family: var(--font-family-title);
+}
+
 h2 {
+    font-family: var(--font-family-title);
     display: flex;
     justify-content: center;
     color: var(--light);
     margin: var(--spacing-8);
     text-align: center;
+}
+
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    filter: sepia(60%);
+    border: 16px solid var(--light);
+    border-bottom: 72px solid var(--light);
+    transform: rotate(-10deg);
+
+}
+
+.recipe-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-4);
 }
 
 .middleText {
@@ -34,18 +60,15 @@ h2 {
     color: var(--light);
 }
 
-.advertisement p {
+ul {
+    padding: var(--spacing-4);
+
+}
+li {
+    text-decoration: none;
+    font-size: var(--title-2-font-size);
     color: var(--light);
-}
-
-footer {
-    margin-top: var(--spacing-8);
-}
-
-footer p {
-    font-size: var(--spacing-2);
-    opacity: var(--opacity);
-    margin: 0 var(--spacing-2);
+    list-style: square;
 }
 
 @keyframes pulsation_bouton {
@@ -59,25 +82,5 @@ footer p {
     }
 }
 
-@media screen and (max-width: 1000px) {
-
-    h1 {
-        padding: var(--spacing-2);
-        font-size: var(--title-font-size-responsive);
-    }
-
-    h2 {
-        margin: var(--spacing-2);
-    }
-
-    .middleText {
-        margin: var(--spacing-2);
-    }
-
-    .boutonBeer {
-        margin: 0;
-    }
-
-}
 
 
