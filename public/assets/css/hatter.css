@@ -12,9 +12,11 @@ nav {
     position: fixed;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
 }
+
 .navbar-brand {
     font-family: var(--font-family-title);
 }
+
 nav a {
     color: var(--light);
     font-size: 24px;
@@ -66,4 +68,8 @@ footer a {
 .card {
     border: none;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.footer-copyright {
+    color: var(--light);
 }
