@@ -6,9 +6,32 @@ use App\Model\CocktailManager;
 
 class ShotController extends AbstractController
 {
+    public const ABSURD_INGREDIENTS = [
+        'Wax',
+        'Soy Sauce',
+        'Tabasco',
+        'Pumpkin Soup',
+        'Gaspacho',
+        'Compost',
+        'Liquid Soap',
+        'Vinegar',
+        'Sock Juice',
+        'Hair Spray',
+        'Pink Paint',
+        'Sausage Syrup',
+        'BZH Caramel',
+        'Motor Oil',
+        'Brake Fluid',
+        'Windshield Washer',
+        'Perfume',
+    ];
+
     public function show()
     {
         $cocktailManager = new CocktailManager();
+
+        $randomizer = array_rand(self::ABSURD_INGREDIENTS, 1);
+        $randomIngredient = self::ABSURD_INGREDIENTS[$randomizer];
 
         $cocktails = $cocktailManager->getCocktailData();
         $cocktailsAliases = [
@@ -43,6 +66,7 @@ class ShotController extends AbstractController
         return $this->twig->render('ShotGenerator/generate.html.twig', [
             'cocktails' => $cocktails,
             'cocktailsAliases' => $cocktailsAliases,
+            'randomIngredient' => $randomIngredient,
         ]);
     }
 }
