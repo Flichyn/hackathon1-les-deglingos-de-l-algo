@@ -10,7 +10,7 @@ class ShotController extends AbstractController
     {
         $cocktailManager = new CocktailManager();
 
-        $cocktails = $cocktailManager->getRandomCocktailById();
+        $cocktails = $cocktailManager->getCocktailData();
 
         return $this->twig->render('ShotGenerator/generate.html.twig', [
             'cocktails' => $cocktails,

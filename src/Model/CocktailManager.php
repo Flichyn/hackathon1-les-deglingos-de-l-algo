@@ -43,4 +43,23 @@ class CocktailManager
 
         return $response->toArray();
     }
+
+    public function getCocktailData(): array
+    {
+        $cocktails = $this->getRandomCocktailById();
+        $cocktailsInfos = [];
+
+        foreach ($cocktails as $cocktail) {
+            foreach ($cocktail as $cocktailData) {
+                $cocktailsInfos['name'] = $cocktailData['strDrink'];
+                $cocktailsInfos['image'] = $cocktailData['strDrinkThumb'];
+                $cocktailsInfos['ingredient1'] = $cocktailData['strIngredient1'];
+                $cocktailsInfos['ingredient2'] = $cocktailData['strIngredient2'];
+                $cocktailsInfos['ingredient3'] = $cocktailData['strIngredient3'];
+                $cocktailsInfos['ingredient4'] = $cocktailData['strIngredient4'];
+                $cocktailsInfos['ingredient5'] = $cocktailData['strIngredient5'];
+            }
+        }
+        return $cocktailsInfos;
+    }
 }
