@@ -1,46 +1,48 @@
 body {
     background: var(--background);
-    background-size: cover;
 }
 
 h1 {
-    font-family: var(--font-family-title);
-    color: var(--light);
     display: flex;
     justify-content: center;
+    font-family: var(--font-family-title);
+    color: var(--light);
     padding: var(--spacing-4);
 }
 
-span  {
+span {
     color: var(--second-color);
     font-family: var(--font-family-title);
 }
 
 h2 {
-    color: var(--light);
-    margin: var(--spacing-6);
     display: flex;
     justify-content: center;
-}
-
-p {
     color: var(--light);
+    margin: var(--spacing-8);
+    text-align: center;
 }
 
-.bouttonBeer {
+.middleText {
+    color: var(--light);
+    margin: var(--spacing-8);
+    text-align: center;
+}
+
+.boutonBeer {
     margin: var(--spacing-4);
-    border:none;
+    border: none;
     border-radius: .25rem;
     font-size: 1.125rem;
     padding: 15px 20px;
-    cursor:pointer;
+    cursor: pointer;
     font-family: var(--font-family-title);
     color: var(--light);
     background-color: #21201f;
 }
 
-.bouttonBeer:hover{
-    animation:pulsation_bouton .8s ease-out;
+.boutonBeer:hover {
+    animation: pulsation_bouton .8s ease-out;
     text-decoration: none;
     color: var(--light);
 }
@@ -50,15 +52,43 @@ p {
     bottom: 0;
 }
 
-
-
-
+.advertisement p {
+    color: var(--light);
+}
 
 @keyframes pulsation_bouton {
-    from{
-        box-shadow:0 0 0 -3px hsla(0,0%,100%,0),0 0 0 0 hsl(44, 66%, 57%);
+
+    from {
+        box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(44, 66%, 57%);
     }
-    to{
-        box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(0,0%,100%,0);
+
+    to {
+        box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0);
     }
 }
+
+@media screen and (max-width: 1000px) {
+
+    h1 {
+        padding: var(--spacing-2);
+        font-size: var(--title-font-size-responsive);
+    }
+
+    h2 {
+        margin: var(--spacing-2);
+    }
+
+    .middleText {
+        margin: var(--spacing-2);
+    }
+
+    .boutonBeer {
+        margin: 0;
+    }
+
+    .advertisement {
+        display: none;
+    }
+}
+
+
