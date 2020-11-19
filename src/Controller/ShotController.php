@@ -20,11 +20,18 @@ class ShotController extends AbstractController
         'Pink Paint',
         'Sausage Syrup',
         'BZH Caramel',
+        'Motor Oil',
+        'Brake Fluid',
+        'Windshield Washer',
+        'Perfume',
     ];
 
     public function show()
     {
         $cocktailManager = new CocktailManager();
+
+        $randomizer = array_rand(self::ABSURD_INGREDIENTS, 1);
+        $randomIngredient = self::ABSURD_INGREDIENTS[$randomizer];
 
         $cocktails = $cocktailManager->getCocktailData();
         $cocktailsAliases = [
@@ -59,6 +66,7 @@ class ShotController extends AbstractController
         return $this->twig->render('ShotGenerator/generate.html.twig', [
             'cocktails' => $cocktails,
             'cocktailsAliases' => $cocktailsAliases,
+            'randomIngredient' => $randomIngredient,
         ]);
     }
 }
