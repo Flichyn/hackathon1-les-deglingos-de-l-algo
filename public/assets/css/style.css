@@ -5,21 +5,27 @@
     --font-family: 'EB Garamond', serif;
 
     --dark: rgb(16, 8, 3);
-    --light: rgb(250, 248, 248);
+    --light: rgb(255, 255, 255);
+    --second-color: #998344;
     --background: url("/assets/images/background.jpg") no-repeat center;
 
     --border-radius: 8px;
 
-    --title-font-size: 4rem;
+    --title-font-size: 6rem;
+    --title-font-size-responsive: 4.5rem;
     --title-2-font-size: 2.5rem;
 
     --font-size-a: 10pt;
     --font-size-h3: 16pt;
 
-    --spacing:8px;
-    --spacing-2:calc(var(--spacing) * 2);
-    --spacing-4:calc(var(--spacing) * 4);
-    --spacing-6:calc(var(--spacing) * 6);
+    --spacing: 8px;
+    --spacing-2: calc(var(--spacing) * 2);
+    --spacing-4: calc(var(--spacing) * 4);
+    --spacing-6: calc(var(--spacing) * 6);
+    --spacing-8: calc(var(--spacing) * 8);
+    --spacing-10: calc(var(--spacing) * 10);
+    --spacing-12: calc(var(--spacing) * 12);
+
     --opacity: 0.70;
 
     --spacing-section: calc(var(--spacing) * 8);
@@ -28,8 +34,14 @@
 
 * {
     font-family: var(--font-family);
+    font-size: var(--font-family);
 }
 
 h1 {
     font-family: 'EB Garamond', serif;
+    font-size: var(--title-font-size);
+}
+
+h2 {
+    font-size: var(--title-2-font-size);
 }
