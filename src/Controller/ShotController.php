@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\CocktailManager;
+use App\Model\QuoteManager;
 
 class ShotController extends AbstractController
 {
@@ -29,7 +30,6 @@ class ShotController extends AbstractController
     public function show()
     {
         $cocktailManager = new CocktailManager();
-
         $randomizer = array_rand(self::ABSURD_INGREDIENTS, 1);
         $randomIngredient = self::ABSURD_INGREDIENTS[$randomizer];
 
@@ -63,10 +63,14 @@ class ShotController extends AbstractController
             $cocktails['ingredient5'] = $cocktailsAliases[$name];
         }
 
+        $quoteManager = new QuoteManager();
+        $quote = $quoteManager->randomQuote();
+
         return $this->twig->render('ShotGenerator/generate.html.twig', [
             'cocktails' => $cocktails,
+            'quote' => $quote,
             'cocktailsAliases' => $cocktailsAliases,
             'randomIngredient' => $randomIngredient,
-        ]);
+            ]);
     }
 }

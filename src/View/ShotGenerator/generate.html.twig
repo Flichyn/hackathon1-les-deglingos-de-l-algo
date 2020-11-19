@@ -32,10 +32,13 @@
                     {% if cocktails.ingredient5 is not empty %}
                     <li>{{ cocktails.ingredient5 }}</li>
                     {% endif %}
-                        <li>{{ randomIngredient }}</li>
+                    <li>{{ randomIngredient }}</li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="container text-center inspirational-bullshit-container">
+        <p class="inspirational-bullshit">{{ quote.quoteText }}</p>
     </div>
 
     <script>setTimeout(function () {
