@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --font-family-title: 'Anton', sans-serif;
+    --font-family: 'EB Garamond', serif;
+
+    --dark: rgb(16, 8, 3);
+    --light: rgb(250, 248, 248);
+    --background: url("/assets/images/background.jpg") no-repeat center;
+
+    --border-radius: 8px;
+
+    --title-font-size: 4rem;
+    --title-2-font-size: 2.5rem;
+
+    --font-size-a: 10pt;
+    --font-size-h3: 16pt;
+
+    --spacing:8px;
+    --spacing-2:calc(var(--spacing) * 2);
+    --spacing-4:calc(var(--spacing) * 4);
+    --spacing-6:calc(var(--spacing) * 6);
+    --opacity: 0.70;
+
+    --spacing-section: calc(var(--spacing) * 8);
+
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+h1 {
+    font-family: 'EB Garamond', serif;
+}
