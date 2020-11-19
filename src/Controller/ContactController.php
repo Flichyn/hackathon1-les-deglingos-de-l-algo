@@ -8,7 +8,7 @@ use Symfony\Component\Mime\Email;
 
 class ContactController extends AbstractController
 {
-    public function contactSend()
+    public function send()
     {
         $contact = [];
         $errors = [];
