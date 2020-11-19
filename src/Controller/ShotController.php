@@ -6,6 +6,22 @@ use App\Model\CocktailManager;
 
 class ShotController extends AbstractController
 {
+    public const ABSURD_INGREDIENTS = [
+        'Wax',
+        'Soy Sauce',
+        'Tabasco',
+        'Pumpkin Soup',
+        'Gaspacho',
+        'Compost',
+        'Liquid Soap',
+        'Vinegar',
+        'Sock Juice',
+        'Hair Spray',
+        'Pink Paint',
+        'Sausage Syrup',
+        'BZH Caramel',
+    ];
+
     public function show()
     {
         $cocktailManager = new CocktailManager();
