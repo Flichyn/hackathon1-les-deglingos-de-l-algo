@@ -13,10 +13,10 @@
 
     --title-font-size: 6rem;
     --title-font-size-responsive: 4.5rem;
+    --font-size-h3: 3rem;
     --title-2-font-size: 2.5rem;
 
-    --font-size-a: 10pt;
-    --font-size-h3: 16pt;
+    --font-size-text: 16pt;
 
     --spacing: 8px;
     --spacing-2: calc(var(--spacing) * 2);
@@ -38,10 +38,30 @@
 }
 
 h1 {
-    font-family: 'EB Garamond', serif;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family-title);
+    color: var(--light);
+    padding: var(--spacing-4);
     font-size: var(--title-font-size);
 }
 
 h2 {
     font-size: var(--title-2-font-size);
+}
+
+p {
+    font-size: var(--font-size-text);
+}
+
+span {
+    color: var(--second-color);
+    font-family: var(--font-family-title);
+}
+
+.text-shadow {
+    text-shadow: 3px 3px rgba(0,0,0,0.75);
+}
+.box-shadow {
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
 }
