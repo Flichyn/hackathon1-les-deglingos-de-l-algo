@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %} <link rel="stylesheet" href="/assets/css/form.css"> {% endblock %}
+{% block title %}{{ parent() }} | Merci pour votre commande ! {% endblock %}
+
+{% block content %}
+    <div class="container mb-2">
+        <div class="jumbotron text-center">
+            <h1>Merci</h1>
+            <p class="lead">
+                Votre message a bien été envoyé, nous reviendrons vers vous dans les plus brefs délais.
+            </p>
+            <hr>
+            <p class="lead">
+                <a href='/home/index/' class="btn btn-secondary btn-lg" role="button">Retour à l'accueil</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
