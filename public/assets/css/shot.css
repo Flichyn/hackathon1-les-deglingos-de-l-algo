@@ -16,14 +16,21 @@ h2 {
     display: flex;
     justify-content: center;
     color: var(--light);
-    margin: var(--spacing-8);
+    margin: var(--spacing-6);
     text-align: center;
 }
 
+.page-title {
+    margin-bottom: 0;
+}
+
+.cocktail-title {
+    margin-bottom: 0;
+}
 
 .cocktail {
-    width: 400px;
-    height: 400px;
+    width: 370px;
+    height: 370px;
     object-fit: cover;
     filter: sepia(60%);
     border: 16px solid var(--light);
@@ -54,7 +61,7 @@ ul {
 }
 li {
     text-decoration: none;
-    font-size: var(--title-2-font-size);
+    font-size: 1.8rem;
     color: var(--light);
     list-style: square;
 }
