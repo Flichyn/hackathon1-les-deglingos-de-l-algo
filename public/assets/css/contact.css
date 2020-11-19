@@ -2,6 +2,14 @@ body {
     background: var(--background);
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family-title);
+    color: var(--light);
+    padding: var(--spacing-4);
+}
+
 h2 {
     display: flex;
     justify-content: center;
@@ -10,15 +18,18 @@ h2 {
     text-align: center;
 }
 
-.middleText {
+label {
+    color: var(--light);
+}
+
+p {
     color: var(--light);
     margin: var(--spacing-8);
-    text-align: center;
+
 }
 
 .boutonBeer {
     margin: var(--spacing-4);
-    margin-bottom: var(--spacing-2);
     border: none;
     border-radius: .25rem;
     font-size: 1.125rem;
@@ -27,29 +38,12 @@ h2 {
     font-family: var(--font-family-title);
     color: var(--light);
     background-color: #21201f;
-    display: flex;
-    justify-content: center;
 }
 
 .boutonBeer:hover {
     animation: pulsation_bouton .8s ease-out;
     text-decoration: none;
     color: var(--light);
-}
-
-.advertisement p {
-    color: var(--light);
-}
-
-footer {
-    margin-top: var(--spacing);
-    opacity: var(--opacity);
-}
-
-footer p {
-    font-size: var(--spacing-2);
-    opacity: var(--opacity);
-    margin: 0 var(--spacing-2);
 }
 
 @keyframes pulsation_bouton {
@@ -62,26 +56,3 @@ footer p {
         box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0);
     }
 }
-
-@media screen and (max-width: 1000px) {
-
-    h1 {
-        padding: var(--spacing-2);
-        font-size: var(--title-font-size-responsive);
-    }
-
-    h2 {
-        margin: var(--spacing-2);
-    }
-
-    .middleText {
-        margin: var(--spacing-2);
-    }
-
-    .boutonBeer {
-        margin: 0;
-    }
-
-}
-
-

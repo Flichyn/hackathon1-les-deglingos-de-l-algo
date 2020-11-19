@@ -1,13 +1,13 @@
 {% extends 'layout.html.twig' %}
-{% block stylesheet %} <link rel="stylesheet" href="/assets/css/infoform.css"> {% endblock %}
-{% block title %}{{ parent() }} | Demande de renseignements{% endblock %}
+{% block stylesheet %} <link rel="stylesheet" href="/assets/css/contact.css"> {% endblock %}
+{% block title %}{{ parent() }} | Contact{% endblock %}
 
 {% block content %}
-
+    <h1 class="title">Contact</h1>
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1 col-12">
-                <h1 class="title"> Demande de renseignements </h1>
+
             </div>
         </div>
         {% if not errors is empty %}
@@ -19,28 +19,28 @@
                 {% endfor %}
             </div>
         {% endif %}
-        <div class="row infoform">
+        <div class="row contactform">
             <div class="col-8 offset-2">
-                <h2 class="title-2">Vos informations</h2>
+                <h2 class="title-2">Your informations</h2>
                 <form action="" method="post">
                     <div class="form-group">
-                        <label for="firstname"> Prénom : </label>
-                        <input type="text" name="firstname" id="firstname" placeholder="John" value="{{ info.firstname }}" class="form-control">
+                        <label for="firstname"> Firstname : </label>
+                        <input type="text" name="firstname" id="firstname" placeholder="John" value="{{ contact.firstname }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="lastname"> Nom : </label>
-                        <input type="text" name="lastname" id="lastname" placeholder="Doe" value="{{ info.lastname }}" class="form-control">
+                        <label for="lastname"> Lastname : </label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Doe" value="{{ contact.lastname }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="email"> Adresse email : </label>
-                        <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" value="{{ info.email }}" class="form-control">
+                        <label for="email"> Email : </label>
+                        <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" value="{{ contact.email }}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="message"> Message : </label>
-                        <textarea name="message" id="message" placeholder="Ecrivez votre message ici..." value="{{ info.message }}" class="form-control"></textarea>
+                        <textarea name="message" id="message" placeholder="Write your message here..." value="{{ contact.message }}" class="form-control"></textarea>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-dark">Envoyer</button>
+                    <div class="d-flex col-lg-12 justify-content-center">
+                        <button type="submit" class="boutonBeer btn btn-dark">Send</button>
                     </div>
                 </form>
             </div>
