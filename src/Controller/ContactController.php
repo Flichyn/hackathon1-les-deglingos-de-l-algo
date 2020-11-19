@@ -14,7 +14,7 @@ class ContactController extends AbstractController
         $errors = [];
         if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             $contact = array_map('trim', $_POST);
-            $errors = $this->infoValidate($contact);
+            $errors = $this->contactValidate($contact);
 
             if (empty($errors)) {
                 $transport = Transport::fromDsn(MAILER_DSN);
@@ -22,7 +22,7 @@ class ContactController extends AbstractController
                 $email = (new Email())
                     ->from($contact['email'])
                     ->to(MAIL_TO)
-                    ->subject('Message de SNAPSHOT')
+                    ->subject('Message from SNAPSHOT')
                     ->html($this->twig->render('Contact/email.html.twig', ['contact' => $contact]));
 
                 $mailer->send($email);
@@ -31,7 +31,7 @@ class ContactController extends AbstractController
         }
 
         return $this->twig->render('Contact/contact.html.twig', [
-            'info' => $contact,
+            'contact' => $contact,
             'errors' => $errors]);
     }
     public function thanks()
@@ -39,27 +39,27 @@ class ContactController extends AbstractController
         return $this->twig->render('Contact/thanks.html.twig');
     }
 
-    public function infoValidate(array $info): array
+    public function contactValidate(array $contact): array
     {
         $inputLength = 100;
         $errors = [];
-        if (empty($info['firstname'])) {
-            $errors[] = 'Le champ prénom est obligatoire';
+        if (empty($contact['firstname'])) {
+            $errors[] = 'The firstname field is required';
         }
-        if (strlen($info['firstname']) > $inputLength) {
-            $errors[] = 'Le champ prénom doit contenir moins de ' . $inputLength . ' caractères';
+        if (strlen($contact['firstname']) > $inputLength) {
+            $errors[] = 'The firstname field must contain less than' . $inputLength . ' characters';
         }
-        if (empty($info['lastname'])) {
-            $errors[] = 'Le champ nom est obligatoire';
+        if (empty($contact['lastname'])) {
+            $errors[] = 'The lastname field is required';
         }
-        if (strlen($info['lastname']) > $inputLength) {
-            $errors[] = 'Le champ nom doit contenir moins de ' . $inputLength . ' caractères';
+        if (strlen($contact['lastname']) > $inputLength) {
+            $errors[] = 'The lastname field must contain less than' . $inputLength . ' characters';
         }
-        if (empty($info['email'])) {
-            $errors[] = 'Le champ email est obligatoire';
+        if (empty($contact['email'])) {
+            $errors[] = 'The email field is required';
         }
-        if (strlen($info['email']) > $inputLength) {
-            $errors[] = 'Le champ email doit contenir moins de ' . $inputLength . ' caractères';
+        if (strlen($contact['email']) > $inputLength) {
+            $errors[] = 'The email field must contain less than' . $inputLength . ' characters';
         }
         return $errors ?? [];
     }
