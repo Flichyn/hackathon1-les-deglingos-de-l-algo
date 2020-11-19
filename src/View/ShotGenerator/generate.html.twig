@@ -1,5 +1,36 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/generate.css">{% endblock %}
+
+{% block title %}{{ parent() }} | Generate{% endblock %}
+
 {% block content %}
-    {{ dump(cocktails) }}
+    <h1>YOUR SHOT IS...</h1>
+
+    <div class="yourShot">
+        <img src="{{ cocktails.image }}" alt="Your shot">
+        <ul>
+            {% if cocktails.ingredient1 is not empty %}
+                <li>{{ cocktails.ingredient1 }}</li>
+            {% endif %}
+            {% if cocktails.ingredient2 is not empty %}
+                <li>{{ cocktails.ingredient2 }}</li>
+            {% endif %}
+            {% if cocktails.ingredient3 is not empty %}
+                <li>{{ cocktails.ingredient3 }}</li>
+            {% endif %}
+            {% if cocktails.ingredient4 is not empty %}
+                <li>{{ cocktails.ingredient4 }}</li>
+            {% endif %}
+            {% if cocktails.ingredient5 is not empty %}
+                <li>{{ cocktails.ingredient5 }}</li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <script>setTimeout(function () {
+            window.location.href = "/home/index";
+        }, 20000);
+    </script>
 {% endblock %}
