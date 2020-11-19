@@ -1,5 +1,9 @@
 body {
     background: var(--background);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 span {
@@ -12,14 +16,21 @@ h2 {
     display: flex;
     justify-content: center;
     color: var(--light);
-    margin: var(--spacing-8);
+    margin: var(--spacing-6);
     text-align: center;
 }
 
+.page-title {
+    margin-bottom: 0;
+}
 
-img {
-    width: 400px;
-    height: 400px;
+.cocktail-title {
+    margin-bottom: 0;
+}
+
+.cocktail {
+    width: 370px;
+    height: 370px;
     object-fit: cover;
     filter: sepia(60%);
     border: 16px solid var(--light);
@@ -44,31 +55,13 @@ img {
     text-align: center;
 }
 
-.boutonBeer {
-    margin: var(--spacing-4);
-    border: none;
-    border-radius: .25rem;
-    font-size: 1.125rem;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-family: var(--font-family-title);
-    color: var(--light);
-    background-color: #21201f;
-}
-
-.boutonBeer:hover {
-    animation: pulsation_bouton .8s ease-out;
-    text-decoration: none;
-    color: var(--light);
-}
-
 ul {
     padding: var(--spacing-4);
 
 }
 li {
     text-decoration: none;
-    font-size: var(--title-2-font-size);
+    font-size: 1.8rem;
     color: var(--light);
     list-style: square;
 }
@@ -97,19 +90,3 @@ li {
     content: url("/assets/images/right-quotes-symbol.png");
     opacity: var(--opacity);
 }
-
-
-
-@keyframes pulsation_bouton {
-
-    from {
-        box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(44, 66%, 57%);
-    }
-
-    to {
-        box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0);
-    }
-}
-
-
-

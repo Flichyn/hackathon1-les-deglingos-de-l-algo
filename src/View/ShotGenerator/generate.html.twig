@@ -6,31 +6,31 @@
 {% block title %}{{ parent() }} | Generate{% endblock %}
 
 {% block content %}
-    <h1 class="text-shadow">YOUR <span>&nbsp;SHOT&nbsp;</span> IS...</h1>
+    <h1 class="text-shadow page-title">YOUR<span>&nbsp;SHOT&nbsp;</span>IS...</h1>
 
-    <h2 class="text-shadow">{{ cocktails.name }}</h2>
+    <h2 class="text-shadow cocktail-title">{{ cocktails.name }}</h2>
 
     <div class="yourShot container">
         <div class="recipe-container">
             <div>
-                <img src="{{ cocktails.image }}" alt="Your shot" class="shot-image box-shadow">
+                <img src="{{ cocktails.image }}" class="cocktail" alt="Your shot" class="shot-image box-shadow">
             </div>
             <div class="shot-ingredients">
                 <ul>
                     {% if cocktails.ingredient1 is not empty %}
-                    <li>{{ cocktails.ingredient1 }}</li>
+                        <li>{{ cocktails.ingredient1 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient2 is not empty %}
-                    <li>{{ cocktails.ingredient2 }}</li>
+                        <li>{{ cocktails.ingredient2 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient3 is not empty %}
-                    <li>{{ cocktails.ingredient3 }}</li>
+                        <li>{{ cocktails.ingredient3 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient4 is not empty %}
-                    <li>{{ cocktails.ingredient4 }}</li>
+                        <li>{{ cocktails.ingredient4 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient5 is not empty %}
-                    <li>{{ cocktails.ingredient5 }}</li>
+                        <li>{{ cocktails.ingredient5 }}</li>
                     {% endif %}
                     <li>{{ randomIngredient }}</li>
                 </ul>
