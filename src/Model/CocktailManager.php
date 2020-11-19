@@ -51,13 +51,13 @@ class CocktailManager
 
         foreach ($cocktails as $cocktail) {
             foreach ($cocktail as $cocktailData) {
-                $cocktailsInfos['name'] = $cocktailData['strDrink'];
-                $cocktailsInfos['image'] = $cocktailData['strDrinkThumb'];
-                $cocktailsInfos['ingredient1'] = $cocktailData['strIngredient1'];
-                $cocktailsInfos['ingredient2'] = $cocktailData['strIngredient2'];
-                $cocktailsInfos['ingredient3'] = $cocktailData['strIngredient3'];
-                $cocktailsInfos['ingredient4'] = $cocktailData['strIngredient4'];
-                $cocktailsInfos['ingredient5'] = $cocktailData['strIngredient5'];
+                $cocktailsInfos['name'] = ucwords($cocktailData['strDrink']);
+                $cocktailsInfos['image'] = ucwords($cocktailData['strDrinkThumb']);
+                $cocktailsInfos['ingredient1'] = ucwords($cocktailData['strIngredient1']);
+                $cocktailsInfos['ingredient2'] = ucwords($cocktailData['strIngredient2']);
+                $cocktailsInfos['ingredient3'] = ucwords($cocktailData['strIngredient3']);
+                $cocktailsInfos['ingredient4'] = ucwords($cocktailData['strIngredient4']);
+                $cocktailsInfos['ingredient5'] = ucwords($cocktailData['strIngredient5']);
             }
         }
         return $cocktailsInfos;
