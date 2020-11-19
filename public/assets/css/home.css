@@ -26,15 +26,17 @@ h2 {
     cursor: pointer;
     font-family: var(--font-family-title);
     color: var(--light);
-    background-color: #21201f;
+    background-color: var(--second-color);
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
 }
 
 .boutonBeer:hover {
     animation: pulsation_bouton .8s ease-out;
     text-decoration: none;
     color: var(--light);
+    text-shadow: 2px 2px rgba(0,0,0,0.75);
 }
 
 .advertisement p {
@@ -55,7 +57,7 @@ footer p {
 @keyframes pulsation_bouton {
 
     from {
-        box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(44, 66%, 57%);
+        box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(60, 25%, 98%);
     }
 
     to {

@@ -48,6 +48,8 @@ h1 {
 
 h2 {
     font-size: var(--title-2-font-size);
+    text-shadow: 3px 3px rgba(0,0,0,0.75);
+    font-family: var(--font-family-title);
 }
 
 p {
@@ -63,6 +65,7 @@ span {
 .text-shadow {
     text-shadow: 3px 3px rgba(0,0,0,0.75);
 }
+
 .box-shadow {
     box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
 }
