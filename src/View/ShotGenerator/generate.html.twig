@@ -6,14 +6,14 @@
 {% block title %}{{ parent() }} | Generate{% endblock %}
 
 {% block content %}
-    <h1 class="text-shadow">YOUR <span>&nbsp;SHOT&nbsp;</span> IS...</h1>
+    <h1 class="text-shadow">YOUR<span>&nbsp;SHOT&nbsp;</span>IS...</h1>
 
     <h2 class="text-shadow">{{ cocktails.name }}</h2>
 
     <div class="yourShot container">
         <div class="recipe-container">
             <div>
-                <img src="{{ cocktails.image }}" alt="Your shot" class="shot-image box-shadow">
+                <img src="{{ cocktails.image }}" class="cocktail" alt="Your shot" class="shot-image box-shadow">
             </div>
             <div class="shot-ingredients">
                 <ul>
