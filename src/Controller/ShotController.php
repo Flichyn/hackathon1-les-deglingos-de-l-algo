@@ -72,6 +72,5 @@ class ShotController extends AbstractController
             'cocktailsAliases' => $cocktailsAliases,
             'randomIngredient' => $randomIngredient,
             ]);
-
     }
 }
