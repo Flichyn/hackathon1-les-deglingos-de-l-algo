@@ -34,6 +34,8 @@ img {
     align-items: center;
     flex-wrap: wrap;
     margin-top: var(--spacing-4);
+    padding: var(--spacing-8);
+
 }
 
 .middleText {
@@ -70,6 +72,33 @@ li {
     color: var(--light);
     list-style: square;
 }
+
+.inspirational-bullshit {
+    font-size: calc(var(--font-size-h3)*1.1);
+    opacity: var(--opacity);
+    line-height: 1em;
+    font-style: italic;
+    padding: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+}
+
+/*
+.inspirational-bullshit-container {
+    background: rgba(255,255,255,0.1);
+}
+*/
+
+.inspirational-bullshit:before{
+    content: url("/assets/images/left-quotes-sign.png");
+    opacity: var(--opacity);
+}
+
+.inspirational-bullshit:after {
+    content: url("/assets/images/right-quotes-symbol.png");
+    opacity: var(--opacity);
+}
+
+
 
 @keyframes pulsation_bouton {
 
