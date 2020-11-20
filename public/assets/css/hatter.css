@@ -74,6 +74,6 @@ footer a {
     color: var(--light);
 }
 
-.contact-container {
+.contact-container, .danger {
     display: none;
 }

@@ -84,17 +84,31 @@ span {
     max-width: 64px;
 }
 
+.danger {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    bottom: var(--spacing-4);
+    right: var(--spacing-6);
+    max-width: 64px;
+}
+
+.danger:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.danger img{
+    height: 70px;
+    width: auto;
+}
+
 @media screen and (max-width: 1000px) {
     .go-back {
         display: none;
     }
 }
-
-/*.contact-container {*/
-/*    display: flex;*/
-/*    flex-direction: row-reverse;*/
-/*    width: 100%*/
-/*}*/
 
 .boutonBeer {
     margin: var(--spacing-4);
@@ -128,4 +142,12 @@ span {
     to {
         box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0);
     }
+}
+
+.footlink:link, .footlink:visited {
+    text-decoration: none;
+}
+
+.footlink:hover {
+    color: var(--second-color);
 }
