@@ -102,6 +102,11 @@ class ShotController extends AbstractController
         ]);
     }
 
+    /**
+     *
+     * @SuppressWarnings(PHPMD)
+     */
+
     public function chooseYourAlcohol()
     {
         if ($_SERVER["REQUEST_METHOD"] === 'POST') {
