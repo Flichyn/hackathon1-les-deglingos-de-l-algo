@@ -24,20 +24,27 @@
                 All you need is a still, your ingredients, and your insatiable urge to get drunk.
             </p>
         </div>
-        <div class="d-flex col-lg-12 justify-content-center">
-            <a class="boutonBeer" href="/shot/show">BEER ME ! *</a>
+        <div class="d-flex">
+            <div class="d-flex col-lg-6">
+                <form method="post" action="/shot/chooseYourAlcohol"  class="d-flex flex-column align-items-center justify-content-center text-center">
+                    <label class="buttons-text">Choose you alcohol</label>
+                    </br>
+                    <select name="alcohol" id="alcohol">
+                        <option value="Vodka">Potato Alcohol</option>
+                        <option value="Gin">Bathtub Gin</option>
+                        <option value="Rum">Beet Alcohol</option>
+                        <option value="Tequila">Fermented Salsa Sauce</option>
+                        <option value="Scotch">Gasoline</option>
+                    </select>
+                    <button class="boutonBeer justify-self-center">Get my shot !</button>
+                </form>
+            </div>
+            <div class="d-flex flex-column col-lg-6 align-items-center justify-content-between">
+                <p class="buttons-text">... or trust us</p>
+                <a class="boutonBeer" href="/shot/show">BEER ME ! *</a>
+            </div>
+
         </div>
-        <form method="post" action="/shot/chooseYourAlcohol">
-            <label>Alcohol list</label>
-            <select name="alcohol" id="alcohol">
-                <option value="Vodka">Potato Alcohol</option>
-                <option value="Gin">Bathtub Gin</option>
-                <option value="Rum">Beet Alcohol</option>
-                <option value="Tequila">Fermented Salsa Sauce</option>
-                <option value="Scotch">Gasoline</option>
-            </select>
-            <button class="boutonBeer">Get my shot !</button>
-        </form>
     </div>
 {% endblock %}
 {% block footer %}
