@@ -27,9 +27,11 @@ h2 {
 .cocktail-title {
     margin-bottom: 0;
 }
+
 .shot-image {
     background: var(--dark);
 }
+
 .danger {
     position: fixed;
     display: flex;
@@ -43,6 +45,18 @@ h2 {
 .danger:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.butonContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+}
+
+.refresh {
+    position: fixed;
+    top: var(--spacing-2);
+    max-width: 64px;
 }
 
 .danger img{
@@ -96,12 +110,6 @@ li {
     margin-bottom: var(--spacing-2);
 }
 
-/*
-.inspirational-bullshit-container {
-    background: rgba(255,255,255,0.1);
-}
-*/
-
 .inspirational-bullshit:before{
     content: url("/assets/images/left-quotes-sign.png");
     opacity: var(--opacity);
@@ -123,6 +131,12 @@ li {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    h1 {
+        padding-top: 150px;
+    }
+}
+
 @media screen and (max-width: 575px) {
     .danger {
         display: none;
@@ -132,5 +146,8 @@ li {
     }
     ul {
         margin-top: var(--spacing-4);
+    }
+    .boutonBeer {
+        position: absolute;
     }
 }
