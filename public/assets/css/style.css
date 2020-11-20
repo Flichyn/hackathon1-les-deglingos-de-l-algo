@@ -84,12 +84,6 @@ span {
     max-width: 64px;
 }
 
-@media screen and (max-width: 1000px) {
-    .go-back {
-        display: none;
-    }
-}
-
 /*.contact-container {*/
 /*    display: flex;*/
 /*    flex-direction: row-reverse;*/
@@ -128,4 +122,12 @@ span {
     to {
         box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0);
     }
+}
+
+.footlink:link, .footlink:visited {
+    text-decoration: none;
+}
+
+.footlink:hover {
+    color: var(--second-color);
 }
