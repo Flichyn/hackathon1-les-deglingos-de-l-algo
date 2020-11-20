@@ -58,6 +58,13 @@ h2 {
     border: 16px solid var(--light);
     border-bottom: 72px solid var(--light);
     transform: rotate(-10deg);
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.cocktail:hover {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
 }
 
 .recipe-container {
