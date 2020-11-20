@@ -84,6 +84,13 @@ span {
     max-width: 64px;
 }
 
+.refresh {
+    position: fixed;
+    top: var(--spacing-12);
+    right: var(--spacing-2);
+    max-width: 64px;
+}
+
 .danger {
     position: fixed;
     display: flex;
