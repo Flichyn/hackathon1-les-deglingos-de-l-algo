@@ -89,7 +89,7 @@ span {
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
-    bottom: var(--spacing-2);
+    bottom: var(--spacing-4);
     right: var(--spacing-6);
     max-width: 64px;
 }
