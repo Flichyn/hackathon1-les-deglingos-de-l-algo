@@ -66,6 +66,7 @@ class ShotController extends AbstractController
         $quoteManager = new QuoteManager();
         $quote = $quoteManager->randomQuote();
 
+
         return $this->twig->render('ShotGenerator/generate.html.twig', [
             'cocktails' => $cocktails,
             'quote' => $quote,
