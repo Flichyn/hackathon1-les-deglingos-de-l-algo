@@ -142,3 +142,11 @@ footer a {
         display: none;
     }
 }
+
+.white-span {
+    color: var(--light);
+}
+
+.yellow-span {
+    color: var(--second-color);
+}
