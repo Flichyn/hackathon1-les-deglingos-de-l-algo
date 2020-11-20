@@ -37,14 +37,14 @@ label {
     background-color: var(--second-color);
     display: flex;
     justify-content: center;
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
 .boutonBeer:hover {
     animation: pulsation_bouton .8s ease-out;
     text-decoration: none;
     color: var(--light);
-    text-shadow: 2px 2px rgba(0,0,0,0.75);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
 }
 
 .advertisement p {
@@ -83,10 +83,21 @@ footer a {
     text-align: center;
 }
 
-.buttons-text{
-    font-family: var(--font-family-title)
+.button-margin {
+    margin-top: var(--spacing-2);
+}
+.trust-us {
+    font-family: var(--font-family-title);
+    margin-top: var(--spacing-4);
+    margin-bottom: 0;
+}
 
-      .disclaimer-link {
+.buttons-text {
+    font-family: var(--font-family-title);
+    margin-top: var(--spacing-4);
+}
+
+.disclaimer-link {
     opacity: var(--opacity);
     color: var(--light);
 }
@@ -124,8 +135,10 @@ footer a {
     .middleText {
         margin: var(--spacing-2);
     }
+}
 
-    .boutonBeer {
-        margin: 0;
+@media screen and (max-width: 575px) {
+    .danger {
+        display: none;
     }
 }
