@@ -1,0 +1,79 @@
+.home-header {
+    height: 100vh;
+    background: var(--dark);
+    background-image: url("../images/hatter_header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.navbar-brand {
+    font-family: var(--font-family-title);
+}
+
+nav a {
+    color: var(--light);
+    font-size: 24px;
+}
+
+section {
+    padding: 280px 0;
+}
+
+section p {
+    color: var(--dark);
+}
+
+section h2 {
+    margin-bottom: var(--spacing-8);
+    color: lightgray;
+}
+
+.hats {
+    padding: 280px 24px;
+    background: lightgray;
+}
+
+h2 {
+    color: var(--light);
+}
+
+footer {
+    background: var(--dark);
+}
+
+footer h3 {
+    font-family: var(--font-family-title);
+    color: var(--light);
+}
+
+footer p {
+    font-size: 18px;
+}
+
+footer a {
+    color: var(--light);
+}
+
+.card-deck {
+    background: lightgray;
+}
+
+.card {
+    border: none;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.footer-copyright {
+    color: var(--light);
+}
+
+.contact-container {
+    display: none;
+}

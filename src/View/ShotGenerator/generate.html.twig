@@ -20,19 +20,19 @@
             <div class="shot-ingredients">
                 <ul>
                     {% if cocktails.ingredient1 is not empty %}
-                    <li>{{ cocktails.ingredient1 }}</li>
+                        <li>{{ cocktails.ingredient1 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient2 is not empty %}
-                    <li>{{ cocktails.ingredient2 }}</li>
+                        <li>{{ cocktails.ingredient2 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient3 is not empty %}
-                    <li>{{ cocktails.ingredient3 }}</li>
+                        <li>{{ cocktails.ingredient3 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient4 is not empty %}
-                    <li>{{ cocktails.ingredient4 }}</li>
+                        <li>{{ cocktails.ingredient4 }}</li>
                     {% endif %}
                     {% if cocktails.ingredient5 is not empty %}
-                    <li>{{ cocktails.ingredient5 }}</li>
+                        <li>{{ cocktails.ingredient5 }}</li>
                     {% endif %}
                     <li>{{ randomIngredient }}</li>
                 </ul>
@@ -44,7 +44,7 @@
     </div>
 
     <script>setTimeout(function () {
-            window.location.href = "/home/index";
-        }, 20000000);
+            window.location.href = "/notSnapshot/hattersGonnaHat";
+        }, 20000);
     </script>
 {% endblock %}
