@@ -115,4 +115,17 @@ class CocktailManager
         }
         return $cocktailsInfos;
     }
+
+    public function isAlcoholic($data)
+    {
+        $client = HttpClient::create();
+        $data = strtolower($data);
+        $data = str_replace(' ', '+', $data);
+        $response = $client->request(
+            'GET',
+            'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=' . $data
+        );
+
+        return $response->toArray();
+    }
 }

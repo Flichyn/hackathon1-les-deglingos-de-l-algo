@@ -25,15 +25,31 @@ class ShotController extends AbstractController
         'Brake Fluid',
         'Windshield Washer',
         'Perfume',
+        'Toothpaste',
+        'Shampoo',
+        'Fuel',
+        'Ether',
+        'Baby food',
+        'Oister Sauce',
+        'Rubbing Alcohol',
+        'Sewer Water',
+        'Fermented Milk',
+        'Moisturizer',
+        'Mustard',
+        'Olive Oil',
+        'Fermented Apple Juice',
+        'Fertilizer',
+        'Mixed Pizza',
+        'Melted Cheese',
+        'Sriracha Sauce',
+        'Wasabi',
     ];
 
     public function show()
     {
         $cocktailManager = new CocktailManager();
-        $randomizer = array_rand(self::ABSURD_INGREDIENTS, 1);
-        $randomIngredient = self::ABSURD_INGREDIENTS[$randomizer];
-
         $cocktails = $cocktailManager->getCocktailData();
+
         $cocktailsAliases = [
             'Vodka' => 'Potato Alcohol',
             'Gin' => 'Bathtub Gin',
@@ -63,6 +79,18 @@ class ShotController extends AbstractController
             $cocktails['ingredient5'] = $cocktailsAliases[$name];
         }
 
+        foreach ($cocktails as $data => $cocktailData) {
+            $isAlcoolic = $cocktailManager->isAlcoholic($cocktailData);
+
+            if (
+                isset($isAlcoolic['ingredients'][0]['strAlcohol']) &&
+                $isAlcoolic['ingredients'][0]['strAlcohol'] === 'Yes'
+            ) {
+                $randomizer = array_rand(self::ABSURD_INGREDIENTS, 1);
+                $cocktails[$data] = self::ABSURD_INGREDIENTS[$randomizer];
+            }
+        }
+
         $quoteManager = new QuoteManager();
         $quote = $quoteManager->randomQuote();
 
@@ -71,9 +99,13 @@ class ShotController extends AbstractController
             'cocktails' => $cocktails,
             'quote' => $quote,
             'cocktailsAliases' => $cocktailsAliases,
-            'randomIngredient' => $randomIngredient,
-            ]);
+        ]);
     }
+
+    /**
+     *
+     * @SuppressWarnings(PHPMD)
+     */
 
     public function chooseYourAlcohol()
     {
@@ -111,6 +143,18 @@ class ShotController extends AbstractController
             if (array_key_exists($cocktails['ingredient5'], $cocktailsAliases)) {
                 $name = $cocktails['ingredient5'];
                 $cocktails['ingredient5'] = $cocktailsAliases[$name];
+            }
+
+            foreach ($cocktails as $data => $cocktailData) {
+                $isAlcoolic = $cocktailManager->isAlcoholic($cocktailData);
+
+                if (
+                    isset($isAlcoolic['ingredients'][0]['strAlcohol']) &&
+                    $isAlcoolic['ingredients'][0]['strAlcohol'] === 'Yes'
+                ) {
+                    $randomizer = array_rand(self::ABSURD_INGREDIENTS, 1);
+                    $cocktails[$data] = self::ABSURD_INGREDIENTS[$randomizer];
+                }
             }
 
             $quoteManager = new QuoteManager();
