@@ -77,11 +77,44 @@ span {
     max-width: 64px;
 }
 
-.contact-container {
+.go-back {
+    position: fixed;
+    top: var(--spacing-2);
+    left: var(--spacing-2);
+    max-width: 64px;
+}
+
+.danger {
+    position: fixed;
     display: flex;
     flex-direction: row-reverse;
-    width: 100%
+    width: 100%;
+    bottom: var(--spacing-2);
+    right: var(--spacing-6);
+    max-width: 64px;
 }
+
+.danger:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.danger img{
+    height: 70px;
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .go-back {
+        display: none;
+    }
+}
+
+/*.contact-container {*/
+/*    display: flex;*/
+/*    flex-direction: row-reverse;*/
+/*    width: 100%*/
+/*}*/
 
 .boutonBeer {
     margin: var(--spacing-4);

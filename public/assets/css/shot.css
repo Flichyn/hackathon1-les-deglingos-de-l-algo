@@ -64,7 +64,7 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     margin-top: var(--spacing-4);
-    padding: var(--spacing-8);
+    padding: var(--spacing-6);
 
 }
 
@@ -86,12 +86,12 @@ li {
 }
 
 .inspirational-bullshit {
-    font-size: calc(var(--font-size-h3)*1.1);
+    font-size: calc(var(--font-size-h3)*0.8);
     opacity: var(--opacity);
     line-height: 1em;
     font-style: italic;
     padding: var(--spacing-4);
-    margin-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-2);
 }
 
 /*

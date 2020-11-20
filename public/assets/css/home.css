@@ -68,12 +68,16 @@ footer a {
     color: var(--light);
 }
 
-footer a:link, footer a:visited {
+.footlink:link, .footlink:visited {
     text-decoration: none;
 }
 
 footer a:hover {
     color: var(--second-color);
+}
+
+.disclaimer {
+    text-align: center;
 }
 
 @keyframes pulsation_bouton {
