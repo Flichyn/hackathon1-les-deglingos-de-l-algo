@@ -87,7 +87,7 @@ span {
 .refresh {
     position: fixed;
     top: var(--spacing-12);
-    left: var(--spacing-2);
+    right: var(--spacing-2);
     max-width: 64px;
 }
 
