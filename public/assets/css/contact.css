@@ -29,5 +29,17 @@ label {
 p {
     color: var(--light);
     margin: var(--spacing-8);
+}
 
+@media screen and (max-width: 575px) {
+    .danger {
+        display: none;
+    }
+    h1 {
+        padding-top: 150px;
+    }
+    .boutonContact {
+        position: absolute;
+        top: 0;
+    }
 }

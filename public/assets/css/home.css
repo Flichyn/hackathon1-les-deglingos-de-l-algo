@@ -141,7 +141,6 @@ footer a {
     .danger {
         display: none;
     }
-
     h1 {
         padding-top: 150px;
     }
@@ -149,4 +148,13 @@ footer a {
         position: absolute;
         top: 0;
     }
+}
+
+.white-span {
+    color: var(--light);
+}
+
+.yellow-span {
+    color: var(--second-color);
+>>>>>>> 842d64d61c282e80cd63ab3b388c25e0f3eede62
 }

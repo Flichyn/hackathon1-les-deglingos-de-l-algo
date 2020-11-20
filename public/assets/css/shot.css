@@ -27,7 +27,9 @@ h2 {
 .cocktail-title {
     margin-bottom: 0;
 }
-
+.shot-image {
+    background: var(--dark);
+}
 .danger {
     position: fixed;
     display: flex;
@@ -124,5 +126,11 @@ li {
 @media screen and (max-width: 575px) {
     .danger {
         display: none;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    ul {
+        margin-top: var(--spacing-4);
     }
 }
