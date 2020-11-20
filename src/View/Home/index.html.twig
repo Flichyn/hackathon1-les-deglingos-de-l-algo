@@ -2,6 +2,9 @@
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/home.css">{% endblock %}
 {% block content %}
+    <div class="contact-container">
+        <a class="boutonBeer contact" href="/contact/send"><img src="/assets/images/phone.png" alt=""></a>
+    </div>
     <h1 class="text-shadow">SNAP<span>SHOT</span></h1>
     <h2>Thirsty ? We’ve got your back !</h2>
     <div class="container">
@@ -31,6 +34,6 @@
         <p class="hidden-text">
             * Smuggled alcohol may cause blindness, brain damage and sometimes death, we disclaim any responsibility.
         </p>
-        <a href="">Legal Mentions</a>
+        <a class="footlink" href="/home/disclaimer">Disclaimer</a>
     </footer>
 {% endblock %}

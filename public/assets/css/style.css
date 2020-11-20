@@ -77,11 +77,24 @@ span {
     max-width: 64px;
 }
 
-.contact-container {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%
+.go-back {
+    position: fixed;
+    top: var(--spacing-2);
+    left: var(--spacing-2);
+    max-width: 64px;
 }
+
+@media screen and (max-width: 1000px) {
+    .go-back {
+        display: none;
+    }
+}
+
+/*.contact-container {*/
+/*    display: flex;*/
+/*    flex-direction: row-reverse;*/
+/*    width: 100%*/
+/*}*/
 
 .boutonBeer {
     margin: var(--spacing-4);
