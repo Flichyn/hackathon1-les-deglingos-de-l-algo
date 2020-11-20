@@ -156,4 +156,11 @@ span {
     .danger {
         display: none;
     }
+    h1 {
+        padding-top: 150px;
+    }
+    .boutonContact {
+        position: absolute;
+        top: 0;
+    }
 }
