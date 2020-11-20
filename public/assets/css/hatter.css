@@ -73,3 +73,7 @@ footer a {
 .footer-copyright {
     color: var(--light);
 }
+
+.contact-container {
+    display: none;
+}
