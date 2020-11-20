@@ -27,6 +27,17 @@
         <div class="d-flex col-lg-12 justify-content-center">
             <a class="boutonBeer" href="/shot/show">BEER ME ! *</a>
         </div>
+        <form method="post" action="/shot/chooseYourAlcohol">
+            <label>Alcohol list</label>
+            <select name="alcohol" id="alcohol">
+                <option value="Vodka">Potato Alcohol</option>
+                <option value="Gin">Bathtub Gin</option>
+                <option value="Rum">Beet Alcohol</option>
+                <option value="Tequila">Fermented Salsa Sauce</option>
+                <option value="Scotch">Gasoline</option>
+            </select>
+            <button class="boutonBeer">Get my shot !</button>
+        </form>
     </div>
 {% endblock %}
 {% block footer %}

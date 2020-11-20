@@ -1,0 +1,137 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/hatter.css">{% endblock %}
+
+{% block title %} NOT {{ parent() }} {% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="http://localhost:8000/home/index">HATTERS GONNA HAT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="http://localhost:8000/home/indexnavbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://localhost:8000/home/index">Our Hats<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8000/home/index">Discover us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/home/index">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8000/home/index">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="d-flex flex-column text-center justify-content-around align-items-center home-header">
+        <h1 class="text-shadow">HATTERS GONNA HAT</h1>
+        <h2>Find the hat you deserve.</h2>
+    </header>
+    <section class="container">
+        <div class="d-flex text-center flex-column justify-content-center align-items-center">
+            <h2>Welcome to Hatters Gonna Hat.</h2>
+            <div>
+                <p>At Hatters Gonna Hat, we make the highest quality hats for you. Chenipan silk, kangaroo fur and
+                    guinea pig leather. We have selected the best materials to satisfy you. We have recruited the
+                    best tanners and dressmakers in the region to offer the best quality to the best people : those
+                    who can afford our work. You.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid d-flex hats">
+        <div class="card-deck flex-wrap">
+            <div class="card">
+                <img class="card-img-top" src="/assets/images/nice_hat.jpg" alt="Hat picture">
+                <div class="card-body">
+                    <h3 class="card-title">NICE HAT</h3>
+                    <p class="card-text">A nice, cool, refined hat. Your friends will envy you.</p>
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <button class="card-text btn btn-primary align-self-end justify-self-end">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/assets/images/very_nice_hat.jpg" alt="Hat picture">
+                <div class="card-body">
+                    <h3 class="card-title">VERY NICE HAT</h3>
+                    <p class="card-text">A very nice, cool satin hat. You'll look nice.</p>
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <button class="card-text btn btn-primary align-self-end justify-self-end">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/assets/images/even_nicer_hat.jpg" alt="Hat picture">
+                <div class="card-body">
+                    <h3 class="card-title">EVEN NICER HAT</h3>
+                    <p class="card-text">The most valuable hat you’ve ever seen. Seriously.</p>
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <button class="card-text btn btn-primary align-self-end justify-self-end">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="page-footer font-small pt-4">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h3 class="text-uppercase">HATTERS GONNA HAT</h3>
+                    <p>At Hatters Gonna Hat, we make the highest quality hats for you. Chenipan silk, kangaroo fur and
+                        guinea pig leather. We have selected the best materials to satisfy you. We have recruited the
+                        best tanners and dressmakers in the region to offer the best quality to the best people : those
+                        who can afford our work. You.</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h3 class="text-uppercase">Website links</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="http://localhost:8000/home/index">Our hats</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/home/index">Discover us</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/home/index">Our values</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/home/index">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h3 class="text-uppercase">&nbsp;</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="http://localhost:8000/home/index">Shopping cart</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/home/index">Blog</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/home/index">Saucisse</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/home/index">Our partners</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="http://localhost:8000/home/index"> hattersgonnahat.com</a>
+        </div>
+    </footer>
+{% endblock %}
