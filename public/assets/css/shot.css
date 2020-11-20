@@ -28,6 +28,21 @@ h2 {
     margin-bottom: 0;
 }
 
+.danger {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    bottom: var(--spacing-2);
+    right: var(--spacing-6);
+    max-width: 64px;
+}
+
+.danger:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .danger img{
     height: 70px;
     width: auto;
@@ -93,4 +108,15 @@ li {
 .inspirational-bullshit:after {
     content: url("/assets/images/right-quotes-symbol.png");
     opacity: var(--opacity);
+}
+
+@keyframes pulsation_bouton {
+
+    from {
+        box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(60, 25%, 98%);
+    }
+
+    to {
+        box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0);
+    }
 }
