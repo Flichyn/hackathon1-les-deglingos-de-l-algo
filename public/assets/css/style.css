@@ -32,14 +32,6 @@
 
 }
 
-body {
-    background: var(--background);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-}
-
 * {
     font-family: var(--font-family);
     font-size: var(--font-family);
