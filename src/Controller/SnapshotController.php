@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-class HomeController extends AbstractController
+class SnapshotController extends AbstractController
 {
     /**
      * Display home page
@@ -21,6 +21,11 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Hatter/hatter.html.twig');
+        return $this->twig->render('Home/index.html.twig');
+    }
+
+    public function disclaimer()
+    {
+        return $this->twig->render('Home/disclaimer.html.twig');
     }
 }
